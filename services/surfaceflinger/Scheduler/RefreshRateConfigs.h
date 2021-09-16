@@ -449,6 +449,9 @@ private:
     // and the frame rate override for certains applications.
     float calculateLayerScoreLocked(const LayerRequirement&, const RefreshRate&,
                                     bool isSeamlessSwitch) const REQUIRES(mLock);
+                                    
+    float calculateNonExactMatchingLayerScoreLocked(const LayerRequirement&,
+                                                    const RefreshRate&) const REQUIRES(mLock);                                
 
     void updateDisplayModes(const DisplayModes& mode, DisplayModeId currentModeId) EXCLUDES(mLock);
 
