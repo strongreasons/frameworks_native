@@ -453,9 +453,6 @@ private:
     float calculateNonExactMatchingLayerScoreLocked(const LayerRequirement&,
                                                     const RefreshRate&) const REQUIRES(mLock);                                
 
-    float calculateNonExactMatchingLayerScoreLocked(const LayerRequirement&,
-                                                    const RefreshRate&) const REQUIRES(mLock);
-
     void updateDisplayModes(const DisplayModes& mode, DisplayModeId currentModeId) EXCLUDES(mLock);
 
     void initializeIdleTimer();
